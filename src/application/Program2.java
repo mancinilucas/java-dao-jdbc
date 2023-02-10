@@ -5,6 +5,7 @@ import model.dao.DepartmentDao;
 import model.entities.Department;
 import model.entities.Seller;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Program2 {
@@ -17,8 +18,13 @@ public class Program2 {
         Department dep = departmentDao.findById(2);
         System.out.println(dep);
 
+        System.out.println("\n=== TESTE 2: Department findAll ====");
+        List<Department> list = departmentDao.findAll();
+        for(Department obj : list){
+            System.out.println(obj);
+        }
 
-
+        
         sc.close();
     }
 }
