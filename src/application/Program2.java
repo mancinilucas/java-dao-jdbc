@@ -5,6 +5,7 @@ import model.dao.DepartmentDao;
 import model.entities.Department;
 import model.entities.Seller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,7 +25,12 @@ public class Program2 {
             System.out.println(obj);
         }
 
-        
+        System.out.println("\n=== TESTE 3: Department insert ====");
+        Department newDepartment = new Department(null, "Series");
+        departmentDao.insert(newDepartment);
+        System.out.println("Inserted! New Id = " + newDepartment.getId());
+
+
         sc.close();
     }
 }
